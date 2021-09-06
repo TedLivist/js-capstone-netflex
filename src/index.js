@@ -13,28 +13,35 @@ window.addEventListener('load', async () => {
 
   for (let i = 0; i <= sixShows.length - 1; i++) {
 
-    const firstContainer = document.createElement('div')
-    firstContainer.id = `movie${sixShows[i].id}`
+    const showContainer = document.createElement('div')
+    showContainer.id = `movie${sixShows[i].id}`
 
     const img = document.createElement('img')
     img.src = sixShows[i].image.medium
-    firstContainer.appendChild(img)
+    img.style.width = '20rem'
+    showContainer.appendChild(img)
 
-    const title = document.createElement('h4')
+    const titleLike = document.createElement('div')
+    const title = document.createElement('h3')
+    const likeBtn = document.createElement('i')
+    likeBtn.classList.add('bx')
+    likeBtn.classList.add('bx-heart')
+    likeBtn.classList.add('bx-sm')
+    
     title.textContent = `${sixShows[i].name}`
-    firstContainer.appendChild(title)
+
+    titleLike.style.margin = '5px'
+    titleLike.style.textAlign = 'center'
+
+    titleLike.appendChild(title)
+    titleLike.appendChild(likeBtn)
+    showContainer.appendChild(titleLike)
 
     const commentBtn = document.createElement('div')
     commentBtn.innerHTML = `<button>Comment</button>`
-    firstContainer.appendChild(commentBtn)
+    showContainer.appendChild(commentBtn)
 
-    allShowsContainer.appendChild(firstContainer)
+    allShowsContainer.appendChild(showContainer)
 
   }
-
-  // for (let i = 0; sixShows.length - 1; i++) {
-  //   const showContainer = document.createElement('div')
-
-  //   allShowsContainer.appendChild(showContainer)
-  // }
 })
