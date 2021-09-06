@@ -26,7 +26,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   font-size: 14px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -64,7 +64,7 @@ ul {
 
 .shows-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   width: 90%;
   margin: 2rem auto;
 }
@@ -91,7 +91,7 @@ footer div {
   margin: 25px 0;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 728px) {
   .navbar {
     display: flex;
     flex-direction: row;
@@ -103,5 +103,10 @@ footer div {
     margin-bottom: 0;
     align-self: center;
     justify-self: center;
+  }
+
+  .shows-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
