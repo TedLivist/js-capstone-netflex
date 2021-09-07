@@ -1,6 +1,6 @@
-import getLikes from "./getLikes"
+import { getLikes } from "./getInvolvement"
 import likeBuild from "./likeBuild"
-import postLikes from "./postLikes"
+import { postLikes } from "./postInvolvement"
 
 const buildShows = (showsList, container) => {
   
