@@ -102,6 +102,12 @@ footer {
 footer div {
   margin: 25px 0;
 }
+
+.items-title {
+  color: white;
+  font-weight: bold;
+}
+
 .container {
   display: none;
   background-color: rgb(0, 0, 0, 1);
