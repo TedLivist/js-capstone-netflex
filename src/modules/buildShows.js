@@ -2,8 +2,7 @@ import { getLikes } from "./getInvolvement"
 import { postLikes } from "./postInvolvement"
 import { getLikesCount } from "./counters"
 
-const buildShows = async (showsList, container) => {
-  
+const buildShows = async (showsList, container) => {  
   for (let i = 0; i <= showsList.length - 1; i++) {
     const showContainer = document.createElement('div')
     showContainer.id = `movie_${showsList[i].id}`

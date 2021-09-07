@@ -1,5 +1,5 @@
 const postLikes = async (item) => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/IEprda6bVbN0jOFjgzgK/likes', {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/jOmvR28ksoZ7GUF5P2Cy/likes', {
     method: 'POST',
     body: JSON.stringify({ item_id: item }),
     headers: {
@@ -11,7 +11,7 @@ const postLikes = async (item) => {
 }
 
 const postComments = async (button, userName, comment) => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/cY3e66v2Klx3RmI3fcqJ/comments', {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/jOmvR28ksoZ7GUF5P2Cy/comments', {
     method: 'POST',
     body: JSON.stringify({
       "item_id": button,
