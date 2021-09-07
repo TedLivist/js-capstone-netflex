@@ -1,13 +1,5 @@
 import { getCommentCount } from "../src/modules/counters";
 
-
-// const getCommentCount = (section, lists) => {
-//   section.textContent = '';
-//   lists.length >= 1
-//     ? (section.textContent = `Comments (${lists.length})`)
-//     : (section.textContent = `Comments (0)`);
-// };
-
 test('returns 1 when length is one', () => {
   const container = { textContent: 'lorem' }
   const arr = [{item: 1}]
@@ -28,4 +20,3 @@ test('returns 0 when length is 0', () => {
   getCommentCount(container, arr)
   expect(container.textContent).toBe('Comments (0)')
 })
-
