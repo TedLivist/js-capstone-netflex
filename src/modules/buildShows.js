@@ -1,8 +1,9 @@
 import { getLikes } from "./getInvolvement"
 import likeBuild from "./likeBuild"
 import { postLikes } from "./postInvolvement"
+import getLikesCount from "./counters"
 
-const buildShows = (showsList, container) => {
+const buildShows = async (showsList, container) => {
   
   for (let i = 0; i <= showsList.length - 1; i++) {
     const showContainer = document.createElement('div')
@@ -17,7 +18,7 @@ const buildShows = (showsList, container) => {
     const title = document.createElement('h3')
     const likeBtn = document.createElement('i')
     const likeDisplay = document.createElement('span')
-    likeDisplay.innerHTML = 'Haha'
+    likeDisplay.innerHTML = '0 likes'
 
     likeBtn.classList.add('bx')
     likeBtn.classList.add('bx-heart')
@@ -41,15 +42,15 @@ const buildShows = (showsList, container) => {
 
     container.appendChild(showContainer)
 
+    const listOfLikes = await getLikes()
+    getLikesCount(likeBtn, listOfLikes, likeDisplay)
+
     likeBtn.addEventListener('click', async (e) => {
       await likeBuild(e.target, likeDisplay)
       await postLikes(e.target.id)
       const getReq = await getLikes()
-      for (let i = 0; i <= getReq.length - 1; i++) {
-        if (getReq[i]['item_id'] == e.target.id) {
-          likeDisplay.innerHTML = `${getReq[i].likes} likes`
-        }
-      }
+
+      getLikesCount(e.target, getReq, likeDisplay)
     })
   }
 }
