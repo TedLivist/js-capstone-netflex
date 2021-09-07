@@ -25,11 +25,19 @@ const buildShows = (showsList, container) => {
     titleLike.appendChild(likeBtn)
     showContainer.appendChild(titleLike)
 
-    const commentBtn = document.createElement('div')
-    commentBtn.innerHTML = `<button>Comment</button>`
+    const commentBtn = document.createElement('div');
+    // commentBtn.classList.add('comment-popup');
+    commentBtn.innerHTML = `<button class="comment-popup">Comment</button>`
     showContainer.appendChild(commentBtn)
 
     container.appendChild(showContainer)
+
+    // const btn = document.querySelector('.comment-popup')
+
+    // btn.addEventListener('click', () => {
+    //   console.log('Hahahaha')
+    // })
+
   }
 }
 
