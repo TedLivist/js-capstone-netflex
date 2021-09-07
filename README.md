@@ -12,6 +12,9 @@
 - Webpack
 - Jest
 
+## Live Demo
+Visit the live demo [here](https://bit.ly/3DT9a9H)
+
 ## Getting Started
 
 ### Setup
