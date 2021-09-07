@@ -14,6 +14,7 @@ const buildShows = async (showsList, container) => {
     showContainer.appendChild(img)
 
     const titleLike = document.createElement('div')
+    titleLike.classList.add('like-wrap')
     const title = document.createElement('h3')
     const likeBtn = document.createElement('i')
     const likeDisplay = document.createElement('span')
@@ -30,10 +31,9 @@ const buildShows = async (showsList, container) => {
     titleLike.style.margin = '5px'
     titleLike.style.textAlign = 'center'
 
-    titleLike.appendChild(title)
     titleLike.appendChild(likeBtn)
     titleLike.appendChild(likeDisplay)
-    showContainer.appendChild(titleLike)
+    showContainer.append(title, titleLike)
 
     const commentBtn = document.createElement('div');
     commentBtn.innerHTML = `<button class="comment-popup">Comment</button>`

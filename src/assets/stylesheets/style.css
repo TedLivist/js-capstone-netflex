@@ -25,11 +25,11 @@ main {
 
 img {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 .header {
-  background-color: cadetblue;
+  background-color: #095e61;
   padding: 1rem 2rem;
 }
 
@@ -38,7 +38,7 @@ img {
   flex-direction: column;
   justify-content: center;
   font-size: 14px;
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -74,6 +74,14 @@ img {
   text-decoration: none;
 }
 
+.like-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
 .shows-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -87,8 +95,21 @@ img {
   justify-content: center;
 }
 
+.comment-popup {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #095e61;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: cursive;
+  color: #f1f1f1;
+}
+
 footer {
-  background-color: #5F9EA0;
+  background-color: #095e61;
   margin-top: auto;
   padding-left: 50px;
   color: #f1f1f1;
@@ -100,7 +121,8 @@ footer {
 }
 
 footer div {
-  margin: 25px 0;
+  width: 75%;
+  margin: 25px auto;
 }
 
 .items-title {
@@ -166,12 +188,14 @@ footer div {
 }
 
 .list-item {
+  margin-bottom: 3rem ;
+}
+
+.comment-para {
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .summary {
-  /* margin: 1rem; */
   text-align: left;
   width: 100%;
 }
@@ -180,35 +204,42 @@ footer div {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* margin: 2rem auto; */
   row-gap: 1rem;
 }
 
 .user-name {
   height: 40px;
-  width: 50%;
+  width: 150px;
   padding: 0 1rem;
 }
 
 .user-msg {
   height: 80px;
-  width: 70%;
+  width: 200px;
   padding: 1rem;
 }
 
 .comment-btn {
   margin-bottom: 2rem;
-  width: 50%;
+  width: 150px;
   height: 40px;
-  background-color: cadetblue;
+  background-color: #095e61;
   outline: none;
   border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: cursive;
+  color: #f1f1f1;
 }
 
-.comment-btn:hover {
-  background-color: #095e61;
-  color: #f1f1f1;
+.comment-btn:hover, .comment-popup:hover {
+  background-color: cadetblue;
   cursor: pointer;
+}
+
+.bx:hover {
+  color: cadetblue;
 }
 
 @media (min-width: 728px) {
@@ -239,5 +270,30 @@ footer div {
 @media (min-width: 1100px) {
   .shows-list {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .navbar {
+    width: 87%;
+  }
+
+  .wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .user-name {
+    width: 200px;
+  }
+  
+  .user-msg {
+    width: 300px;
+  }
+  
+  .comment-btn {
+    width: 200px;
+  }
+
+  footer div {
+    width: 95%;
   }
 }
