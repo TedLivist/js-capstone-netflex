@@ -43,13 +43,10 @@ const buildShows = (showsList, container) => {
 
     likeBtn.addEventListener('click', async (e) => {
       await likeBuild(e.target, likeDisplay)
-      const res = await postLikes(e.target.id)
-      console.log(res)
+      await postLikes(e.target.id)
       const getReq = await getLikes()
-      console.log(getReq)
       for (let i = 0; i <= getReq.length - 1; i++) {
         if (getReq[i]['item_id'] == e.target.id) {
-          console.log(getReq[i])
           likeDisplay.innerHTML = `${getReq[i].likes} likes`
         }
       }
