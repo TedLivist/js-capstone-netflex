@@ -1,9 +1,10 @@
 import { getComments } from './getInvolvement';
+import { postComments } from './postInvolvement';
+import renderComments from './renderComments';
 
 const modalStructure = async (buttons, showsList) => {
-  const getComment1 = await getComments()
   for(let i = 0; i < buttons.length; i += 1) {
-    buttons[i].addEventListener('click', () => {
+    buttons[i].addEventListener('click', async () => {
     const modalSection = document.createElement('section');
     modalSection.classList.add('container');
     modalSection.style.display = 'flex'
@@ -65,16 +66,26 @@ const modalStructure = async (buttons, showsList) => {
     const userMsg = document.createElement('textarea');
     userMsg.classList.add('user-msg')
     userMsg.placeholder = 'Your insights'
-    const commentBtn = document.createElement('button');
-    commentBtn.classList.add('comment-btn');
-    commentBtn.textContent = 'Comment';
-
+    const commentButton = document.createElement('button');
+    commentButton.classList.add('comment-btn');
+    commentButton.textContent = 'Comment';
+    commentButton.id = `movie_cmt_${showsList[i].id}`;
 
     const commentDiv = document.createElement('div');
     commentDiv.classList.add('list-item');
-    
-    commentDiv.textContent = `${getComment1[0].creation_date} ${getComment1[0].username}: ${getComment1[0].comment}!`;
 
+    const comments = await getComments(commentButton.id)
+
+    console.log(comments)
+    renderComments(commentDiv, comments)
+
+    commentButton.addEventListener('click', async (e) => {
+      e.preventDefault()
+      await postComments(commentButton.id, userName, userMsg);
+      const getCmts = await getComments(commentButton.id)
+      renderComments(commentDiv, getCmts)
+    })
+    
     document.body.appendChild(modalSection);
     modalSection.appendChild(modalWrapper);
     modalWrapper.appendChild(modalDiv)
@@ -83,7 +94,7 @@ const modalStructure = async (buttons, showsList) => {
     detailWrap.append(detail1, detail2, detail3, detail4)
     imgWrapper.appendChild(img);
 
-    commentForm.append(userName, userMsg, commentBtn)
+    commentForm.append(userName, userMsg, commentButton)
     })
   }
 }
