@@ -55,8 +55,7 @@ const modalStructure = async (buttons, showsList) => {
 
     const commentSection = document.createElement('h3');
     commentSection.classList.add('number');
-    // commentSection.textContent = `Comments (${showsList.length})`;
-
+    
     const addComment = document.createElement('h3');
     addComment.textContent = 'Add a comment';
     const commentForm = document.createElement('form');

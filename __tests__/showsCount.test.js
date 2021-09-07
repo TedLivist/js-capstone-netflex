@@ -1,9 +1,5 @@
 import { showsCount } from "../src/modules/counters";
 
-// const showsCount = (showsList) => {
-//   return showsList.length;
-// };
-
 test('returns 6 when length of array is 6', () => {
   const list = [{item: 3}, {item: 4}, {item: 5}, {item: 1}, {item: 2}, {item: 10}]
   const count = showsCount(list)
