@@ -15,8 +15,6 @@ window.addEventListener('load', async () => {
   
   const commentPopup = [...document.querySelectorAll('.comment-popup')];
   modalStructure(commentPopup, sixShows)
-
-  const postComment1 = await postComments();
  
 })
 
