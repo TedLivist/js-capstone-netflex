@@ -1,3 +1,4 @@
+import { getCommentCount } from './counters';
 import { getComments } from './getInvolvement';
 import { postComments } from './postInvolvement';
 import renderComments from './renderComments';
@@ -54,7 +55,7 @@ const modalStructure = async (buttons, showsList) => {
 
     const commentSection = document.createElement('h3');
     commentSection.classList.add('number');
-    commentSection.textContent = `Comments (${showsList.length})`;
+    // commentSection.textContent = `Comments (${showsList.length})`;
 
     const addComment = document.createElement('h3');
     addComment.textContent = 'Add a comment';
@@ -76,14 +77,19 @@ const modalStructure = async (buttons, showsList) => {
 
     const comments = await getComments(commentButton.id)
 
-    console.log(comments)
     renderComments(commentDiv, comments)
+    comments.length >= 1
+    ? (commentSection.textContent = `Comments (${comments.length})`)
+    : (commentSection.textContent = `Comments (0)`);
 
     commentButton.addEventListener('click', async (e) => {
       e.preventDefault()
       await postComments(commentButton.id, userName, userMsg);
       const getCmts = await getComments(commentButton.id)
+      getCommentCount(commentSection, getCmts)
       renderComments(commentDiv, getCmts)
+      userName.value = '';
+      userMsg.value = '';
     })
     
     document.body.appendChild(modalSection);
