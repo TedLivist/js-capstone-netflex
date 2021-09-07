@@ -107,6 +107,12 @@ footer div {
 
   .shows-list {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .shows-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
