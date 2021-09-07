@@ -1,7 +1,6 @@
 import { getLikes } from "./getInvolvement"
-import likeBuild from "./likeBuild"
 import { postLikes } from "./postInvolvement"
-import getLikesCount from "./counters"
+import { getLikesCount } from "./counters"
 
 const buildShows = async (showsList, container) => {
   
@@ -46,7 +45,6 @@ const buildShows = async (showsList, container) => {
     getLikesCount(likeBtn, listOfLikes, likeDisplay)
 
     likeBtn.addEventListener('click', async (e) => {
-      await likeBuild(e.target, likeDisplay)
       await postLikes(e.target.id)
       const getReq = await getLikes()
 

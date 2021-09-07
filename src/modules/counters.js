@@ -6,4 +6,8 @@ const getLikesCount = (target, likesArray, likesContainer) => {
   }
 }
 
-export default getLikesCount
+const showsCount = (showsList) => {
+  return showsList.length
+}
+
+export { getLikesCount, showsCount }
