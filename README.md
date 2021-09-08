@@ -13,7 +13,7 @@
 - Jest
 
 ## Live Demo
-Visit the live demo [here](https://bit.ly/38LEB7H)
+Visit the live demo [here](https://bit.ly/3tmGmS2)
 
 ## Getting Started
 
