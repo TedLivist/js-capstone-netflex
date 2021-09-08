@@ -54,6 +54,8 @@ const modalStructure = async (buttons, showsList) => {
       commentSection.classList.add('number');
       const addComment = document.createElement('h3');
       addComment.textContent = 'Add a comment';
+      addComment.style.marginBottom = '1rem';
+      addComment.style.textAlign = 'center';
       const commentForm = document.createElement('form');
       commentForm.classList.add('form');
       const userName = document.createElement('input');
@@ -90,7 +92,9 @@ const modalStructure = async (buttons, showsList) => {
       modalSection.appendChild(modalWrapper);
       modalWrapper.appendChild(modalDiv);
       modalDiv.append(
-        close, imgWrapper, itemNumber, detailWrap, detail5, commentSection, commentDiv, commentForm,
+        close, imgWrapper, itemNumber,
+        detailWrap, detail5, commentSection,
+        commentDiv, addComment, commentForm,
       );
       detailWrap.append(detail1, detail2, detail3, detail4);
       imgWrapper.appendChild(img);
