@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  height: 100%;
+  position: relative;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
+
+.header {
+  background-color: #095e61;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.logo {
+  align-self: flex-start;
+  border-radius: 50%;
+  border: 2px solid #f1f1f1;
+  padding: 0.5rem;
+  font-family: cursive;
+  margin-bottom: 1rem;
+}
+
+.links {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  text-decoration: underline;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.like-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2rem;
+}
+
+.shows-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+footer div {
+  width: 75%;
+  margin: 25px auto;
+}
+
+.shows-list > div {
+  margin: 1rem 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.comment-popup {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #095e61;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: cursive;
+  color: #f1f1f1;
+}
+
+footer {
+  background-color: #095e61;
+  margin-top: auto;
+  padding-left: 50px;
+  color: #f1f1f1;
+}
+
+.underlined {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.items-title {
+  color: white;
+  font-weight: bold;
+}
+
+.container {
+  display: none;
+  background-color: rgb(0, 0, 0, 1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.modal-wrapper {
+  background-color: #f1f1f1;
+  height: 80%;
+  width: 80%;
+  margin: 5rem auto 0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.img-wrapper {
+  padding: 1rem;
+  text-align: center;
+}
+
+.number {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.close {
+  font-size: 35px;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.close:hover {
+  color: cadetblue;
+}
+
+.detail-wrap {
+  width: 100%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.list-item {
+  margin-bottom: 3rem;
+}
+
+.comment-para {
+  margin-bottom: 1rem;
+}
+
+.summary {
+  text-align: left;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 1rem;
+}
+
+.user-name {
+  height: 40px;
+  width: 150px;
+  padding: 0 1rem;
+}
+
+.user-msg {
+  height: 80px;
+  width: 200px;
+  padding: 1rem;
+}
+
+.comment-btn {
+  margin-bottom: 2rem;
+  width: 150px;
+  height: 40px;
+  background-color: #095e61;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: cursive;
+  color: #f1f1f1;
+}
+
+.comment-btn:hover,
+.comment-popup:hover {
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+.bx:hover {
+  color: cadetblue;
+}
+
+@media (min-width: 728px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 0;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .shows-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .shows-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .navbar {
+    width: 87%;
+  }
+
+  .wrapper {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .user-name {
+    width: 200px;
+  }
+
+  .user-msg {
+    width: 300px;
+  }
+
+  .comment-btn {
+    width: 200px;
+  }
+
+  footer div {
+    width: 95%;
+  }
+}
