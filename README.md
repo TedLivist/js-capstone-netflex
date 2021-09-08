@@ -4,13 +4,16 @@
 
 > NETFLEX is a web application based on an external - here the TV Maze API. The API provides data about TV Shows. We then built the webapp around it. The webapp has 2 user interfaces (pages): The Homepage and the Comment modal. On the Homepage, a list of 6 TV Shows are present, each Show can be `liked` and commented on.
 
-![screenshot](./src/assets/images/scrnsht.jpg)
+![screenshot](./src/assets/images/scrnsht.png)
 
 ## Built With
 
 - HTML, CSS and JavaScript
 - Webpack
 - Jest
+
+## Live Demo
+Visit the live demo [here](https://bit.ly/3tmGmS2)
 
 ## Getting Started
 

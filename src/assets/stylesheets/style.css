@@ -52,26 +52,16 @@ img {
 }
 
 .links {
-  color:#f1f1f1;
+  color: #f1f1f1;
   text-decoration: none;
 }
 
-.logo a:hover,
-.nav-link a:hover {
+.logo a:hover {
   text-decoration: underline;
 }
 
 .nav-list {
   display: flex;
-}
-
-.nav-link {
-  margin-right: 1rem;
-}
-
-.nav-link a {
-  color: #f1f1f1;
-  text-decoration: none;
 }
 
 .like-wrap {
@@ -87,6 +77,11 @@ img {
   grid-template-columns: 1fr;
   width: 90%;
   margin: 2rem auto;
+}
+
+footer div {
+  width: 75%;
+  margin: 25px auto;
 }
 
 .shows-list > div {
@@ -118,11 +113,6 @@ footer {
 .underlined {
   text-decoration: underline;
   font-style: italic;
-}
-
-footer div {
-  width: 75%;
-  margin: 25px auto;
 }
 
 .items-title {
@@ -188,7 +178,7 @@ footer div {
 }
 
 .list-item {
-  margin-bottom: 3rem ;
+  margin-bottom: 3rem;
 }
 
 .comment-para {
@@ -233,7 +223,8 @@ footer div {
   color: #f1f1f1;
 }
 
-.comment-btn:hover, .comment-popup:hover {
+.comment-btn:hover,
+.comment-popup:hover {
   background-color: cadetblue;
   cursor: pointer;
 }
@@ -263,13 +254,11 @@ footer div {
   .detail-wrap {
     grid-template-columns: 1fr 1fr;
   }
-  
-
 }
 
 @media (min-width: 1100px) {
   .shows-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   .navbar {
@@ -284,11 +273,11 @@ footer div {
   .user-name {
     width: 200px;
   }
-  
+
   .user-msg {
     width: 300px;
   }
-  
+
   .comment-btn {
     width: 200px;
   }
