@@ -9,9 +9,9 @@ const allShowsContainer = document.querySelector('.shows-list');
 
 window.addEventListener('load', async () => {
   const shows = await getShows();
-  const sixShows = shows.slice(0, 6);
+  const sixShows = shows.slice(0, 20);
 
-  itemsTitle.innerHTML = `TV Shows (${showsCount(sixShows)})`;
+  itemsTitle.innerHTML = `TV SHOWS (${showsCount(sixShows)})`;
   await buildShows(sixShows, allShowsContainer);
 
   const commentPopup = [...document.querySelectorAll('.comment-popup')];
