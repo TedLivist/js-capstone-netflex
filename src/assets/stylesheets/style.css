@@ -212,18 +212,18 @@ footer {
 }
 
 .user-name:hover {
-  padding: 0 1.1rem ;
+  padding: 0 1.1rem;
 }
 
 .user-msg:hover {
   padding: 1.5rem;
 }
 
-.user-name:focus, .user-msg:focus {
+.user-name:focus,
+.user-msg:focus {
   outline: none;
   border: 1px solid #095e61;
 }
-
 
 .error-msg {
   background-color: rgb(173, 10, 10);

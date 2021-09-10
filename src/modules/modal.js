@@ -33,7 +33,6 @@ const modalStructure = async (buttons, showsList) => {
       detailWrap.classList.add('detail-wrap');
       const detail1 = document.createElement('h4');
       detail1.textContent = `Language: ${showsList[i].language}`;
-      
 
       const detail2 = document.createElement('h4');
       detail2.textContent = 'Movie genres: ';
@@ -87,14 +86,14 @@ const modalStructure = async (buttons, showsList) => {
         : (commentSection.textContent = 'Comments (0)');
 
       commentButton.addEventListener('click', async (e) => {
-        if(userName.value === '' || userMsg.value === '') {
+        if (userName.value === '' || userMsg.value === '') {
           e.preventDefault();
           const errorMsg = document.createElement('p');
           errorMsg.classList.add('error-msg');
           errorMsg.innerText = 'Please add your name and comment';
-          commentButton.parentNode.insertBefore(errorMsg, commentButton)
+          commentButton.parentNode.insertBefore(errorMsg, commentButton);
           setTimeout(() => {
-            commentForm.removeChild(errorMsg)
+            commentForm.removeChild(errorMsg);
           }, 2000);
         } else {
           e.preventDefault();
@@ -104,9 +103,7 @@ const modalStructure = async (buttons, showsList) => {
           renderComments(commentDiv, getCmts);
           userName.value = '';
           userMsg.value = '';
-          
         }
-   
       });
       document.body.appendChild(modalSection);
       modalSection.appendChild(modalWrapper);
