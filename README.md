@@ -13,7 +13,7 @@
 - Jest
 
 ## Live Demo
-Visit the live demo [here](https://bit.ly/3tmGmS2)
+Visit the live demo [here](https://bit.ly/3tI5qU1)
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ Visit the live demo [here](https://bit.ly/3tmGmS2)
 - [GitHub](https://github.com/TedLivist)
 - [LinkedIn](https://linkedin.com/in/tememandu)
 
-👤 **Juliana Ifionu**
+👤 **Juliana Ifionu 💖**
 
 - [GitHub](https://github.com/julie-ify)
 - [LinkedIn](https://www.linkedin.com/in/e-ifionu/)
