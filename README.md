@@ -50,8 +50,8 @@ Visit the live demo [here](https://bit.ly/3tmGmS2)
 
 👤 **Juliana Ifionu**
 
-- GitHub: [@githubhandle](https://github.com/julie-ify)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/e-ifionu/)
+- [GitHub](https://github.com/julie-ify)
+- [LinkedIn](https://www.linkedin.com/in/e-ifionu/)
 
 ## 🤝 Contributing
 
